@@ -1,9 +1,13 @@
 {% extends "pages/_base.html" %}
-
+{% load static %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
     <h1>Homepage</h1>
+    <div>
+        <img class="bookcover" src="{% static 'images/djangoforprofessionals-scaled.webp' %} " alt='book cover'>
+    </div>
+    
     {% if user.is_authenticated %}
         Hi {{ user.username }}
         <p>
